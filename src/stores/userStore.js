@@ -2,8 +2,8 @@ import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("user", {
   state: () => ({
-    id: localStorage.getItem("userId") || 1,
-    name: localStorage.getItem("userName") || "Test User"
+    id: localStorage.getItem("userId") || null,
+    name: localStorage.getItem("userName") || null
   }),
 
   actions: {

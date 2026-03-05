@@ -3,7 +3,6 @@ import { createTestingPinia } from "@pinia/testing";
 import { flushPromises } from "./utils/flushPromises";
 import TaskList from "../src/components/TaskList.vue";
 
-// Мокаем API
 vi.mock("../src/api/tasks", () => ({
   default: {
     getAll: vi.fn(),

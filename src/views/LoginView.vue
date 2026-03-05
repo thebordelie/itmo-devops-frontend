@@ -4,7 +4,7 @@
 
     <div v-if="userStore.id">
       <p>Вы уже авторизованы</p>
-      <router-link to="/">Перейти к задачам</router-link>
+      <router-link to="/tasks">Перейти к задачам</router-link>
     </div>
 
     <form @submit.prevent="login">
@@ -36,6 +36,6 @@ const login = async () => {
   });
 
   userStore.setUser(response.data);
-  router.push("/");
+  router.push("/tasks");
 };
 </script>
